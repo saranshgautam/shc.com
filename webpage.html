@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Saransh Health Service</title>
+	<style >
+		*
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		body
+		{
+			background-image: url('cross.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			overflow: auto;
+			
+		}
+		header
+		{
+			padding-top: 18px;
+			padding-bottom: 18px;
+			background-color: #a3c2ff;
+			color: black;
+			font-weight: bold;
+			
+			position: sticky;
+			top: 0;
+			padding-left: 1%;
+			padding-right: 1%;
+			display: block;
+		}
+		.head_span
+		{
+			font-size: 24px;
+			
+			font-family: Times New Roman;
+			margin: auto;
+			color: black;
+			text-decoration: none;
+
+		}
+		img
+		{
+			width: 280px;
+			height: 280px;
+			margin: 40px;
+			border-radius: 60%;
+			border: 3px solid black;
+		}
+		.trigger
+		{
+			float: left;
+		}
+		.search
+		{
+			margin-left: auto;
+			font-family: cursive;
+			color: blue;
+			font-size: 30px;
+			font-weight: bold;
+			text-decoration: none;
+			text-align: center;
+			text-shadow: 5px 3px 4px #696969;
+		}
+		#home h1
+		{
+			
+			font-family: bookman, serif;
+			text-align: center;
+			font-size: 42px;
+			padding: 5px;
+			margin-left: 1%;
+			border-top: 1px solid black;
+		}
+		#home p, li
+		{
+			font-family: Lucida, sans-serif;
+			text-align: justify;
+			font-size: 24px;
+			padding: 5px;
+			margin-top: 10px;
+			border-bottom: 1px solid black;
+			margin-left: 1%;
+			margin-right: 1%;
+
+
+		}
+		#home ul
+		{
+			list-style-type: square;
+		}
+		#home
+		{
+			
+			background-color: #fff5d7;
+			border-top: 1px solid black;
+			margin-bottom: 10px;
+		}
+		#home h2
+		{
+			font-size: 36px;
+			color: red;
+			font-family: bookman, serif;
+			margin-top: 10px;
+			padding: 5px;
+			padding-left: 20px;
+			
+		}
+		#home ul
+		{
+			margin-left: 30px;
+		}
+		#diseases
+		{
+			overflow: auto;
+		}
+		#diseases h1
+		{
+			font-family: Courier, monospace;
+			margin-top: 20px;
+			color: brown;
+			font-size: 40px;
+			text-align: center;
+
+		}
+		#myBtn 
+		{
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			font-size: 18px;
+			border: none;
+			outline: none;
+			background-color: red;
+			color: white;
+			cursor: pointer;
+			padding: 15px;
+			border-radius: 4px;
+		}
+		#myBtn:hover 
+		{
+			background-color: #555;
+		}
+		 #footer 
+		{
+			margin-top: 50px;
+			background-image: url('contact.jpg');
+			font-family: Lucida, sans-serif;
+		
+		}
+		#footer p
+		{
+			color: white;
+			text-align: center;
+			font-size: 24px;
+			font-weight: normal;
+			font-family: Lucida, sans-serif;
+			padding-top: 20px;
+			background-color: black;
+			padding: 5px;
+		}
+		#footer h2
+		{
+			color: black;
+			font-size: 18px;
+			padding-left: 8px;
+
+		}
+		#footer h1
+		{
+			text-align: center;
+			padding-top: 10px;
+			font-size: 30px;
+		}
+		#footer div
+		{
+			padding-right: 50px;
+		}
+		#footer img
+		{
+			float: right;
+			margin: 5px;
+			height: 50px;
+			width: 50px;
+			border: none;
+			cursor: pointer;
+		}
+		#up2 h1
+		{
+			text-align: center;
+		}
+		#up2
+		{
+			display: none;
+		}
+		#up2 img
+		{
+			float: right;
+			height: 20px;
+			width: 20px;
+			border: none;
+			margin-top: 5px;
+			cursor: pointer;
+		}
+		#up3
+		{
+			display: none;
+		}
+		#up3 ul , li
+		{
+			list-style: none;
+		}
+		#upimage
+		{
+			display: none;
+		}
+		#downimage
+		{
+			display: block;
+		}
+
+
+	</style>
+</head>
+<body onload="change()" >
+	<button onclick="topFunction()" id="myBtn" title="Go To Top">Top</button>
+	<header id="up1">
+		<h1>Saransh Health Services &nbsp; &nbsp;
+		<span class ="head_span"><a href="#home" class="head_span">Home</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="#diseases" class="head_span">Search Diseases</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="#footer" class="head_span">Contact Us</a> &nbsp; &nbsp; | &nbsp; &nbsp; <a href="#" class="head_span">About Us</a></span> 
+		</h1>
+	</header>
+	<header id="up2">
+		<h1>Saransh Health Service<img id="downimage" src="https://lh3.googleusercontent.com/_GRYFiac51lxAUcS5H1QB9QddKUmzfU63hYNCichIRLsyK4jpkMEa--UIvSFAosVXZfG0ATrGfLNwoX22KGBaq1PyyiUkYB4lPjsKN0Qd6gVdpOmDuFRe1pJs0HVUO1gFQCPhbAWmIgEPTb1VfZAA-98nkjnSlwPuvsgUmWp4Q-O8fCbTx2EkrCt-4_pkbFhiFSVDeycVwWAK11o4GOkl0t0vLwrC601bpGWE2wjkdvzIppkZEu6nZxp2IEzQzXs9DBDC_AMmqyIMP37Uof0pblzulf6Qa8VmcaPEwjUtPEXhHi7TYWCP-LmeHAY87PwvneiOT3Sm30R4IcKEUDcepXbvpk02ZWpSVxG1ZzitxRXGgAyUIY_0LSEOp-erMgaDDL7zZX13xWZ1Bf3eyUcNwmFE7oF44BDXbM0FOcn1c84daH2-RsBf5qsGiXkJjY5FjZw3QvzYuweGYPZrWKu45sb_CWOowX-60vyhqi2KWfJLJynrUqfvHlL5TaFomxBj-FPFeZXpgOijkWserEeqkwZB3SJQVU3yPSGy6KaPOBAxzLSAM-wuUKZcBg2bN1vEsZsl6JH3jwy67rxfnkKH0cHNC3ijAx3SpqxC2mQyyEkxSNVcpwrFecxzSkfEt7YRa_NKfuChmVnHjrI45H7rnvL9Fl15kTxxHUtOpl0nZMfEL2k74AcNlIkFzaqG0jMhp_DAMyqGQpxY0USeeMeE9EChlqOXCMRFWHJ8gL02OlhxMKjT5QuZBI=s26-no?authuser=0" alt="Show more" onclick="show1()"><img src="https://lh3.googleusercontent.com/768LSH2yfZ9GLrimUxJkWkW_zuYqGt-zlmKfkbhaOjnQT2JpmzdyhZPTyc3HjsYrceAhwEAbIqzMO6NGVTz3wwYIqQ8Rqto0gI8OD36elfwX3BfWvlcVOXxKfmXrVmXqD2Nz7QFr79oPeJMcPROvjXvGybFeXw6VpGlOI4j8tfexOlj9N_AzjjNLybb0vYcMyxC1tzgZtbFv4homcvrLuZcFf8ZwAKl1_ZcD3H7NhkIOXmcCkHNPjctY42tJ-nC_K3rrb1O62uX-140hpu1MeGSmzkl3TO-ewSsOCFhZ0jSRzNO-T5nr_Tqg1lZmNaOhNYjiIA1jRMYYEN5tHCgDS6MEPQ6gFK3f_XF5dXAnPsU5mEDY8PL9B_dsX9FBHt31Urcdgl_6WXYr9vh09Ujxbqp6TbtLlH3EbLgFbxMipJE95-PQzGIGV8IzJa4zDIxBXvOmCBKW9SD_GyhcL2LbzVaj5gJR16e7XfgeRL3e2QmWpsuLs3c9ZCzOXE9EViP5ry7l4G8NPDWmpAPxEIiYPdW-CkFz_cWibDhVF2_dV-8cWFD8pOJwC4d3NR4OoBCLgLYghEXnETjm_0EH6sEcPKPb-boZGn9jZ0b2k9p_q8TrdPMSJBtRqIuoiwsaX0SLO8Fq4cjeeXR9PVzBwbszT708lwPoA0HXPeug0_j2dOtiuRoBR_F_TksVYPN24hhWKAQ_-vt01xrBVt3FhvsR5xoNJxSr0OMpslD8-MkR8b1G67csereCZD8=s26-no?authuser=0" alt="Show less" id="upimage" onclick="show2()"></h1>
+	</header>
+	<header id="up3">
+		<ul>
+			<li><a href="#home" class="head_span" onclick="hide()">Home</a></li>
+			<li><a href="#diseases" class="head_span" onclick="hide()">Search Diseases</a></li>
+			<li><a href="#footer" class="head_span" onclick="hide()">Contact us</a></li>
+			<li><a href="#" class="head_span" onclick="hide()">About Us</a></li>
+		</ul>
+		
+	</header>
+	<div id ="home">
+		<h1>Why society needs us?</h1>
+		<p>We here at Saransh Health Service aim to provide the society a platform through which every citizen can get to know about the major diseases prevailing in the society. This is an initiative which tends to educate every native of this beautiful planet about diseases. Here users will get to know about the origin of the disease, some precautions, modes of spread, vaccine, and the most important contact details of the doctors specialised in this field who can help you get cure.</p>
+		<h2>Do you know?</h2>
+		<ul>
+			<li>The 1890's flu killed more than 1 million people 	in Russia in less than 5 weeks.</li>
+			<li>The plague in 1720-23 killed nearly 30% 	population of Marseille, France.</li>
+			<li>Nearly 500 million fell victim to Spanish flu in 1918. Out of them nearly one-fifth died.</li>
+			<li>AIDS had claimed an estimated 35 million lives till late 20th century.</li>
+			<li>Swine flu in 2009 infected as many as 1.4 billion people.</li>
+		</ul>
+		<h2>Our Aim:</h2>
+		<p >Here aware people about such epidemic diseases, which once caused a lot of loss to life and economy in history. We dream of a future where every one will be aware about such diseases and to further coming ones also. For that our executives are continuously adding updates to this website. All we target is to not let such epidemics happen again, and destroy our precious human resource.</p>
+	</div>
+	<div id="diseases">
+		<h1>Search here for any disease</h1>
+		<div class="trigger">
+			<figure><a href="aids.html"  class="search"><img src="https://lh3.googleusercontent.com/QkRjDF1ewiKtrzLom2r20HCb0F5MHL-MUhkn9E7VE3SnzNqxyddYtKSUsQGATWPYM1g9oxF3PJFN6klXejvGFw5EHBiz2yqNUJpO-jYQq-3u76R-2sq0iKj94bQP6IeK9PU7_blacA" alt="Image not available"></a><figcaption class="search"><a href="aids.html"  class="search">HIV/AIDS (Viral)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="chicken_pox.html"  class="search"><img src="https://lh3.googleusercontent.com/LNCmu8YGIPQpBRiJw-jTScdbMSOYbv9pL-FwTAY4m3rHFA47xrY6b2G7SCli6pHWwNFy3pnk112GylAtxVVz2LII1_ct0HsZ44MvX798IJN-WpEGBg4M3WCaYq4O8IHdl6-B1R5Idg" alt="Image not available"></a><figcaption class="search"><a href="chicken_pox.html"  class="search">Chicken Pox (Viral)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="cholera.html"  class="search"><img src="https://lh3.googleusercontent.com/mhtICaP6eYAM6NoLHoeR6011YRCwPm9ujAIEdD3sHfAeXD8tTiBJSbzuLzZHxTZ3HAEywBipD2AEB681vCQGq4BOJhetGUzhXa3m2t_S_MoOSkwATlWglUUoMp9o-04UohE-vZn_mA" alt="Image not available"></a><figcaption class="search"><a href="cholera.html"  class="search">Cholera (Bacterial)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="common_cold.html" class="search"><img src="https://lh3.googleusercontent.com/bTI1Nt477UATFa5oS41CZ5y3uBi6DlqR8TsoAwuPu-bauHCd0CPCSH3szdEMzGVLsr5QnAK6NT8t934JaLcryjSx85ppBwx_g8I8wF687JnL2Dfxi3NN7GBze-ILxzAeqwphc-yrzw" alt="Image not available"></a><figcaption class="search"><a href="common_cold.html" class="search">Common Cold (Viral)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="corona.html" class="search"><img src="https://lh3.googleusercontent.com/EOqDQl5-WEX2BYXuOdRCfPLlgu1rCrv_kuppOlRnyQTQHEp8mBvh7sVGD5GAAqbTcObNYM_CeU10HtZu9w-VIKsYpM8TQgknkPoGmPInwJwZ07zkw4ndr8CuK6JNQcSMvZ-QA9GTOQ" alt="Image not available"></a><figcaption class="search"><a href="corona.html" class="search">Corona (Viral)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="dengue.html" class="search"><img src="https://lh3.googleusercontent.com/Z1M1-iAz76EzICMdp1ZdvONZ0xylEibqhj4yaazq3YwwVCJdlinV_Wnz0kw2W1tiC8KCYnjtmjTCWK-48cZdJH2R4blQ7qhY4XUL6HxaYk6L_IRohKoy0GdP0MCQxS4h8rajoEb6Bw" alt="Image not available"></a><figcaption class="search"><a href="dengue.html" class="search">Dengue (Viral)</a></figcaption></figure>	
+		</div>
+		<div class="trigger">
+			<figure><a href="hepatitis.html" class="search"><img src="https://lh3.googleusercontent.com/39H5TjT1ZGtSU00WHwX1PLH84FLUKFBQl94XSGSPAYfshT5g4bEwIEg4iXRpv-ksGNtZmpN7eRL8D9vIadEKLMJySZ8uk5uzTlsuGCCd5NNGeanf5X0KtOsdP0_OlEHqPBPPKuOdKQ" alt="Image not available"></a><figcaption class="search"><a href="hepatitis.html" class="search">Hepatitis (Viral)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="influenza.html" class="search"><img src="https://lh3.googleusercontent.com/g_tA7DY3ZQg9FAiUQi1mnyueuW-24Kq75YgLi8IxZl1L4j7vlnmhQYpycDSrOZI4OZSFCmWBbuHjmNpIn1WmXnhq8lvo2lgy1MS-PAbvyzXmdOKwSUE0jQzfTBpuFsn57iVhI9ePxg" alt="Image not available"></a><figcaption class="search"><a href="influenza.html" class="search">Influenza (Viral)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="malaria.html" class="search"><img src="https://lh3.googleusercontent.com/ZUNoCP4-THcnb0uhQO4eIHmXVMXQaNtTDjo2K6QD0eCiwL_xy1h0JjGPZWW5t4aVICw4JZFBdVD5SfPbxPRr4WVuH9myis_JD7CkwSpJHT64bjpwJrclhf_hglD3A5Ot6NUy6Hs2dQ" alt="Image not available"></a><figcaption class="search"><a href="malaria.html" class="search">Malaria (Viral)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="meningitis.html" class="search"><img src="https://lh3.googleusercontent.com/LWfda89ZqW4qTeSNhEhH4N7oX7_-A2pgvewQnF22dr_-8r-xcDQm3CWrARhAGt1R8aDzwfEhSXZ17NPIDQnbBW6u_dMODuyMFasXsiqAtotL5PS1K9Qs9X5FtVn9VFfSYqWbRf5HOg" alt="Image not available"></a><figcaption class="search"><a href="meningitis.html" class="search">Meningitis (Bacterial)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="plague.html" class="search"><img src="https://lh3.googleusercontent.com/Y4yd9zweRcjF4NpMPWMe8HC9ypp-w34GJMc6WCfQ5FBXas5cg863md_HtPI0wPPEKt1RQE5-FAMEm9PE604puL39GtAHRLhIYtibZujlz6f-o0228dPFUZbsmBXXpmg_-7RV4r6bgQ" alt="Image not available"></a><figcaption class="search"><a href="plague.html" class="search">Plague (Bacterial)</a></figcaption></figure>
+		</div>
+		<div class="trigger">
+			<figure><a href="pneumonia.html" class="search"><img src="https://lh3.googleusercontent.com/LRy8OKt8dcOnrrcWkn-p-w9Z3SHGRasJA2WdLiMOcsIR3GndDl75Joznbw-312pEII1vVyExcAFTsfE0UggTrz6v0piqsL5RuI8f5MbnooIBQ3Cwx_MJhtpsZzCSezFy8AZK6h5bOA" alt="Image not available"></a><figcaption class="search"><a href="pneumonia.html" class="search">Pneumonia (Bacterial)</a></figcaption></figure>
+		</div>
+		
+	</div>
+	<div id="footer">
+		<br>
+		<h1>
+			Contact Us
+		</h1>
+		<br>
+			<a href="https://www.facebook.com/profile.php?id=100008766993141">
+				<img src="https://lh3.googleusercontent.com/_bpaZIKWu7X9yjP8X9S4rchS3pBCjJnMYs3DGFLWIY97sWn6j31HyHfXTwFpYB9Unwu6pxnn9CjGsdEdMgON9H87Os51tdpN7OixUmzCcYCJpbvsR-Y4m0XgPz9MznbeHAymX8iAdIlFCxTpqchS_OHCkS8ZNcGn14Li5nqzBFbJYbglfzKSdRJQ_SfU39MPdh9tILDjt6Ke9-U8rQoaj5-zwzGEZpwsys9gmZgLwgOv_4vkE6bhGo8ULmis41j9ouvlJYeG7JbIeefqmLwKIobQZENvBgmBH_SDtKHVjsa8CJajwLoLhp4x8pr5Ly4DHZtoZs5FtJMZX-SO5kzTMmS0LaJag90edyAbylog35voPGGMOQNAUHIhMPusdXdt-I-PIuroi7Dwu2mKHhEVlag9c6EffamRijOFe2ogu3Wt9GUEQBa1LfOqH5SdKPw4UiC1by6P1sjdUPpZhsTcwllNXzzJNKVWqeziFWxkep7JRFMFYLOlZRWBbD2I91jmaXw5UnnRQeHiUYCbHaWDDtmKRAa80egWd9V8uBC4eHDyuW3TMNqCsLmeTE8ctd0kkOraOferasAkxFzCMZU_J05KWdBFj3-XtTS3fyjkGVWBTkWpyJLoqaq_St-Nn39ECpv9hBbKgI4_u8wGijtr3naKkjHlu5Jr8lv69sV9--YEOYrIZ6ArFABYJdpYYkW4JArpR_SEE7-uQn4l47IkwLqgN7acVbl5jWrVah2_LfPa9LO2KRg1ydE=s64-no?authuser=0" alt="facebook" style="margin-right: 40px;" title="facebook" >
+			</a>
+			<a href="https://www.instagram.com/enorm_vigor/">
+				<img src="https://lh3.googleusercontent.com/IIwbEXYlyqfWoXRPwcIwv4OFZxJ9zoasiVaZR2n_yOPmCP9ZwZNkg9gXEcpB7ZGtKLoPEab4buYtrBl6U9SUo-7AV1j2-2sr40efH9Z-oEzHq4VpzLCnjWo1DMCFHj8hTNAN2uNcX2FgEgcQXfHnX_-FS0hgv7IEZT8pfLRZUf8rEAEKSmSZZtO3U5FiqLLnr-bcOEAAo15uYjgTxwBXup5UHv_hPdodRWUMpoerIR907KYov9_rBP1HtRbpJk6EZbkTj8QyGEX3iT4Mzc_oilHTy2jOW3E9pt2QWp_T7DMJ3iIs_DigWsABr6NfMvws43sA-OiFLSJsqeSAxHuQiVoC8ZC5W6-ylmTtX9VF5rJkMcvafxCOiIkjKq6HmyuKTxwSaPlhA87YEfyRsUXye3_oua5PywLo_4Yh0-8JoYe0gIRHokw4LSDXOxNJquLFr1IoWth4eOnGZmqarzCoa2FQu8XXHKjI2t30iNFI05XIHSGZaR0NJTu6Ixyw8xTP4JLKaE4Dfjk_d-xTR9jWzKPozrkAJenIPWypE1JM2aDXXiTc4_v5SGQ31ttIkSqu0F9y9pmSwpF8A6I9mfzUAJmnHocmobcp0T5W_RzoyfqZauVCVwynZWTW6L12AJ_MgpO_WkTlpUP_Xl_VSR6pA0CPz_Czwq5llEYXbTXEmpnB_qZBp2vLmDZyJUIiODi1MQb5UubO_hGu4o0WI3ltf_rX3w0Gqnhg_LerGWRxCq2uIBFFBcQnJQo=s64-no?authuser=0" alt="instagram" title="instagram">
+			</a>
+			<a href="https://twitter.com/saranshgautam24">
+				<img src="https://lh3.googleusercontent.com/dQMLKafZXPf49sK4QN14CsGY0ytLT-LsctSAKqza4iQ6DS16MFfL9t_YRUl0UdByUL4t_05dclueHWrD-oupOeqOBRL7b5wa9tcrcaks98yJeKHfWJHItrCE0lDCTqra5LGxLz3jm4rXQd7Gw9efboLSJ78FqiviO377pSSWBQR7ZTX4FwZ-u8Rr3ukI_VUkbeEtLXsTcU5S3IY74HAt3cvJn-28QxVHXw14iy-dB4wP5YxUCUX3ZGzythVjl4vyhUJ3awMNcLbFRPqVRodpBllAW2Ned8YQ-tRIW24w3ZmOk1udsqjW8OhRIVYvEsKeTsvEa0KespcETEm1N99-7ixLgMQPrvnDYPZqSUN7B45541ai6jos6JOUbzUDmbo5G5fSLcXZIL0aaX7hGt26eWGLUSVPRC9fRlhg8KX9iD1nEj7N-4yTtLD9gg4kLdg1NgrEebG-AnF_RnGGvGzOhxwfQEielK17Oea4GvWecce3YpNTPsRJUvP1ELxyOWTv0_afudm7r7M6Qgw_obRmsywvHsxcLC5M7Afq2Z7W7YziTczWGp5cwGgi3at2zioD5NZlje0oWUx7wlAlbtIVD09gUKEGJeEbC7lgYgWZtLgTxoqQIyax_C8LGXNOdlZM9GyDJwCEbC2r9EcfTBbwuxnC5nf4sPxHY3toq7qswLSobx2RA1C-Lad10lv3Vs7U47NGx1uCo9PM-SMbIzCa-CKOqjhjnShLw0oXyFBxfntaall0r8FfrzI=s64-no?authuser=0" alt="twitter" title="twitter">
+			</a>
+			<a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFhNXXBfrpzkRNghRppvslmPLmLcvXPfCzvwxGJGWrxfLgcdbtPXtZwngqNMrWMLMhMJD">
+				<img src="https://lh3.googleusercontent.com/D3CsA-MGKxB2dLOg_46V_mbGqHKQXC_foJq6W4ihLdFBirjdizy_C9pt6VPTFRmPo_cNrustOxSwZrX8biTRx8x1kdkgMdTmhHkhBFvxr-qZgF-SCM8O8xeWKrsTPGaRDqJbwCzfCb0s-xYxbg5gX1LunjxMB0nVRpTv1FgdPOnX7CbPwih_P7JFcSFvDbHjOxe47ct6lJ-IJmj5uVk6bWy4vkO0rIFkdV3dwyyiGWjo3Bkm9GpzTJ9rDcnB5LCRdQtiSyJsFobln-dnPDUuBguZriDpwTY2kVRrJo1fUBTTiZGnuhkiFeQphjSKnKa3d9xc_wsxNkj-BKm2AEuNL_6bIomYg6mditQl5QXR8zMiBWtg1OiWBUen9DvMUtO3k3nU8q4Z7CnGAsrmNxpZV2Cseb7UGALkpapJfh0Adx_5U0ITdOJQwb2zfE62j63ExwWevSizWIlpAZWZCASi3CoE_uji-2as-0E4qYr38tD8N1U1wS1suMuV5eWztGRV739O3Gr1_r4KMQjD5qU1NR2Me9A4qsQcn_Vfqwkt_Hkmh0SM5E7kbZXBupcHChRmiPpHLEDmVbnscTl-x8_PtTOhXaPTb4u95ayBkWlTDMyW_XQFaXUsS_rSPBG-UPBV_ZYYSH_rTZ8XNlZ1t4TN4oQ__ezrM-j67Vrr4W65LG4lqESi7Oe1EUMexJ0JupzaaXzH2VtM1PFZYKGvq7WHhh3OexZj9hiHxBTFqq95-yFHDJhUCtT9-Mk=s64-no?authuser=0" alt="gmail" title="gmail">
+			</a>
+			
+		<br>
+		<h2>
+			Mobile No. : +91 70734-12759
+		</h2>
+
+		<h2>
+			E-mail address : hackersam2451@gmail.com
+		</h2>
+		
+			
+		<br><br><br>
+		
+		<p>
+			Copyright &copy; 2020 All Rights Reserved by Saransh Gautam 
+		</p>
+	</div>
+	<script type="text/javascript">
+		var button = document.getElementById("myBtn");
+		window.onscroll = function()
+		{
+			scrollFunction()
+		};
+		function scrollFunction()
+		{
+			if(document.body.scrollTop > 900 || document.documentElement.scrollTop > 900)
+			{
+				button.style.display = "block";
+			}
+			else
+			{
+				button.style.display = "none";
+			}
+		}
+		function topFunction()
+		{
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+
+		}
+		
+		function change()
+		{
+		 
+			var elem = window.innerWidth;
+			if(elem < 1080)
+			{
+				document.getElementById('up1').style.display = "none";
+				document.getElementById("up2").style.display = "block";
+			}
+		}
+		function show1()
+		{
+			document.getElementById("upimage").style.display="block";
+			document.getElementById("downimage").style.display="none";
+			document.getElementById("up3").style.display = "block";
+
+			
+		}
+		 function show2()
+		 {
+		 	document.getElementById("upimage").style.display="none";
+			document.getElementById("downimage").style.display="block";
+			document.getElementById("up3").style.display = "none";
+
+		 }
+		function hide()
+		{
+			document.getElementById("upimage").style.display="none";
+			document.getElementById("downimage").style.display="block";
+			document.getElementById("up3").style.display = "none";			
+		}
+		
+	</script> 
+</body>
+</html>
